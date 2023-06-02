@@ -1,0 +1,21 @@
+{% extends 'todoapp/layout.html' %}
+{% load static %}
+
+<head>
+    {% block linklog %}
+        <link rel="stylesheet" href="{% static 'useracc/css/main.css' %}">
+    {% endblock linklog%}
+
+    {% block title %}<title>Create account</title>{% endblock title%}
+</head>
+
+{% block content %}
+<div class="container">
+    <h1>Create new account</h1>
+    <form class="ui form" action="{% url 'register' %}" method="post" style="color: white;">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+{% endblock content %}

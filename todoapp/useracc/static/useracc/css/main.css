@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+    
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+  
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+  
+input[type=password]:focus {
+    border: 3px solid #555;
+}
+
+.container h1{
+    color: white;
+    font-size: 45px; 
+}
+
+.container {
+    width: max-content; 
+    height: max-content;
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute; /* or absolute */
+    top: 30%;
+    left: 20%;
+    right: 20%;
+    bottom: 30%;
+    border-radius: 5px;
+    background-color: #353535;
+    padding: 20px;        
+    overflow: hidden;
+    box-shadow: blue 0px 0px 0px 2px inset, #353535 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, #353535 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, #353535 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, #353535 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+
+.btn.btn-success {
+    font-weight: bold;
+}

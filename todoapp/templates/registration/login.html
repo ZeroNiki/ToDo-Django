@@ -1,0 +1,28 @@
+{% extends 'todoapp/layout.html' %}
+{% load static %}
+
+<head>
+    {% block linklog %}
+        <link rel="stylesheet" href="{% static 'useracc/css/main.css' %}">
+    {% endblock linklog %}
+
+    {% block title %}<title>Login</title>{% endblock title%}
+</head>
+
+{% block content %}
+<div class="container">
+    <h1>Login</h1>
+
+    {% if form.errors %}
+        <p>{{ form.errors.error }}</p>
+    {% endif %}
+
+    <form class="ui form" style="color: white;" action="{% url 'login' %}" method="post">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+    <a href="{% url 'password_reset' %}">Forgot password?</a>
+</div>
+{% endblock content %}

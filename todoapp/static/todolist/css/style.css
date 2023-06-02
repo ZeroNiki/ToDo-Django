@@ -1,0 +1,53 @@
+* {
+    list-style: none;
+
+    text-decoration: none;
+}
+
+body {
+    background-color: #161616;
+    overflow-x: hidden;
+}
+
+
+
+/*ToDo*/
+.ui.center.aligned.header {
+    color: #078C07; 
+
+}
+
+#newTask {
+    font-size: 15px;
+    font-weight: 45px;
+    color: #5A5A5A;
+}
+
+#input_task {
+    color: white;
+    background-color: #404040;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.ui.segment {
+    background-color: #353535;
+}
+
+
+.ui.gray.label {
+    color: lightcoral;
+    background-color: #686868;
+}
+
+.ui.big.header {
+    color: lightgreen; 
+}
+
+.test_style {
+    text-align: center;
+    color: #4A4A4A;
+}
+
+

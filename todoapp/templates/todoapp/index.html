@@ -1,0 +1,38 @@
+{% extends 'todoapp/layout.html' %}
+
+{% block content %}
+
+<div style="margin-top: 50px;" class="ui container">
+    <h1 class="ui center aligned header">My task manager</h1>
+    <h3 class="test_style">
+        Productivity is the key to success</h3>
+    <form action="{% url 'add' %}" method="post" class="ui form">
+        {% csrf_token %}
+        <div class="field">
+            <label id="newTask">New task: </label>
+            <input type="text" name="title" placeholder="Enter the name of the task" id="input_task"><br>
+        </div>
+        <button class="ui teal basic button" type="submit">Add</button>
+    </form>
+
+</div>
+
+{% for todo in todo_list %}
+
+<div class="ui segment">
+    <p class="ui big header">{{ todo.title }}</p>
+
+    {% if todo.is_complete == False %}
+    <span class="ui gray label">Not completed</span>
+    <a class="ui primary basic button" href="{% url 'update' todo_id=todo.id %}">Close</a>
+    {% else %}
+    <span class="ui green label">Completed</span>
+    <a href="{% url 'update' todo_id=todo.id %}" class="ui blue button">Open</a>
+    {% endif %}
+    <a href="{% url 'delete' todo_id=todo.id %}" class="ui negative basic button">Delete</a>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock content %}
