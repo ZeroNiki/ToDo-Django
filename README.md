@@ -12,6 +12,8 @@ Written on:
 
 ________________________
 
+<p style="color: red;">! Be careful when redacting the .env file</p>
+
 # Starting via terminal (GNU/Linux)
  
 
